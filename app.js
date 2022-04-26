@@ -19,6 +19,10 @@ if (process.env.NODE_ENV !== "production") {
   app.use(morgan("dev"));
 }
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use("/api/v1", v1.coreRoutes);
+app.use("/api/v1/users", v1.userRoutes);
 
 export default app;
