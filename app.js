@@ -25,5 +25,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/v1", v1.coreRoutes);
 app.use("/api/v1/users", v1.userRoutes);
 app.use("/api/v1/categories", v1.categoryRoutes);
+app.use("/api/v1/products", v1.productRoutes);
 
 export default app;

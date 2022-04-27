@@ -16,6 +16,7 @@ const CategorySchema = mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    products: [{ type: mongoose.Schema.Types.ObjectId, required: true }],
   },
   {
     timestamps: true,
